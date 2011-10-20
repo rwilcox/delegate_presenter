@@ -18,6 +18,17 @@ You mean that little s hack? That's a way to keep yourself from going sane havin
 
 [See my blog article on this subject](http://rwilcox.tumblr.com/post/10546160404/presenter-pattern-rails-3-and-html-safe)
 
+How do I get a presenter for this object I have?
+=================================
+
+Call `Present(object)`
+
+This will look up the name of `object`'s class, then look for a class named (that name) presenter.
+
+So, if object is a Todo instance, DelegatePresenter will look for `TodoPresenter`. It will then instantiate an object of that class, passing the parameter from the Present call into the constructor.
+
+As `DelegatePresenter::Base` subclasses are just `SimpleDelegator`s at heart, this means methods that `TodoPresenter` does not know about will be passed on to (delegated to) the `Todo` instance.
+
 So, what is DelegatePresenter, really?
 ================================
 
