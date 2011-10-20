@@ -2,12 +2,27 @@
 
 require 'spec_helper'
 
+# Pull in some fake helpers. In a Real Rails app these would be provided by Rails
+# TODO: is there an easy way to test this closer to the actual behavior? By pulling in
+# some of Rails, for example?
+class FakeHelpers
+  def h(s)
+    s.gsub(/&/, "&amp;").gsub(/\"/, "&quot;").gsub(/>/, "&gt;").gsub(/</, "&lt;")
+  end
+end
+
+class FakeDelegatePresenter < DelegatePresenter::Base
+  def helpers
+    FakeHelpers.new
+  end
+end
+
 describe "DelegatePresenter::Base" do
 
   describe "HTML building helpers" do
 
     before do
-      @ap = DelegatePresenter::Base.new(1)
+      @ap = FakeDelegatePresenter.new(1)
     end
 
     it "handles HTML elements that should not be escaped" do
