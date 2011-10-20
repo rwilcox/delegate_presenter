@@ -1,4 +1,6 @@
 require "delegate_presenter/version"
+require 'delegate_presenter/application_controller'
+require 'delegate_presenter/present'
 
 module DelegatePresenter
   class Base < SimpleDelegator
