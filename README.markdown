@@ -25,7 +25,7 @@ Call `Present(object)`
 
 This will look up the name of `object`'s class, then look for a class named (that name) presenter.
 
-So, if object is a Todo instance, DelegatePresenter will look for `TodoPresenter`. It will then instantiate an object of that class, passing the parameter from the Present call into the constructor.
+So, if object is a Todo instance, DelegatePresenter will look for `TodoPresenter`. It will then instantiate an object of that class (`TodoPresenter`), passing the parameter from the Present call into the constructor.
 
 As `DelegatePresenter::Base` subclasses are just `SimpleDelegator`s at heart, this means methods that `TodoPresenter` does not know about will be passed on to (delegated to) the `Todo` instance.
 
@@ -38,8 +38,12 @@ DelegatePresenter does two things:
 
   2. Makes Rails helpers available to you via the helpers method, gives you s (above) and h (your old Rails 2 friend)
 
+  3. Gives you a `record_id` method, which will return the ActiveRecord ID of the database object. Because I think it should have been this way in the first place :)
+
 
 Installation
 ================================
 
-TODO: write me
+  1. Add me to your Gemfile
+  2. In your `config/application.rb`, add an autoload path for `app/presenters/`
+  3. Create presenters for your classes. For example: `app/presenters/todo_presenter.rb`. These classes should subclass `DelegatePresenter::Base`
