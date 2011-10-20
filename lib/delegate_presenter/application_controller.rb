@@ -28,6 +28,6 @@ module DelegatePresenter::ApplicationController
   end
 end
 
-class ApplicationController
-  extend DelegatePresenter::ApplicationController
-end
+#class ApplicationController
+#  extend DelegatePresenter::ApplicationController
+#end
