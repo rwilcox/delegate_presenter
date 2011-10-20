@@ -2,6 +2,8 @@ require "delegate_presenter/version"
 require 'delegate_presenter/application_controller'
 require 'delegate_presenter/present'
 
+require 'delegate'
+
 module DelegatePresenter
   class Base < SimpleDelegator
 
@@ -16,7 +18,7 @@ module DelegatePresenter
 
 
     def helpers
-      ApplicationController.all_helpers
+      ::ApplicationController.all_helpers  # the GLOBAL ApplicationController, not the ApplicationController in this namespace
     end
 
     def s(*args)
