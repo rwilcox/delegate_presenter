@@ -1,3 +1,9 @@
+
+# This module adds a method so DelegatePresenter::Base can access your Rails helpers
+# You'll need to extend your ApplicationController with this module name
+#
+# Earlier versions of the gem extended ApplicationController for you, but introduced bugs
+# (possibly dealing with load order???) WD-rpw 10-20-2011
 module DelegatePresenter::ApplicationController
   # Provide access to helper methods from outside controllers and views,
   # such as in Presenter objects. Rails provides ActionController::Base.helpers,
@@ -28,6 +34,3 @@ module DelegatePresenter::ApplicationController
   end
 end
 
-#class ApplicationController
-#  extend DelegatePresenter::ApplicationController
-#end

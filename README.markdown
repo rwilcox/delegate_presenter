@@ -45,8 +45,9 @@ Installation
 ================================
 
   1. Add me to your Gemfile
-  2. In your `config/application.rb`, add an autoload path for `app/presenters/`
-  3. Create presenters for your classes. For example: `app/presenters/todo_presenter.rb`. These classes should subclass `DelegatePresenter::Base`
+  2. In your ApplicationController `extend DelegatePresenter::ApplicationController`
+  3. In your `config/application.rb`, add an autoload path for `app/presenters/`
+  4. Create presenters for your classes. For example: `app/presenters/todo_presenter.rb`. These classes should subclass `DelegatePresenter::Base`
 
 
 Credit where Credit Is Due
