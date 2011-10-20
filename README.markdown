@@ -47,3 +47,20 @@ Installation
   1. Add me to your Gemfile
   2. In your `config/application.rb`, add an autoload path for `app/presenters/`
   3. Create presenters for your classes. For example: `app/presenters/todo_presenter.rb`. These classes should subclass `DelegatePresenter::Base`
+
+
+Credit where Credit Is Due
+=================================
+
+Most of this gem was inspired by (and the initial structure stolen from), [Avdi Grimm](avdi.org)'s blog posts on [Demeter](http://avdi.org/devblog/2011/07/05/demeter-its-not-just-a-good-idea-its-the-law/) and [Nil objects and Falsiness](http://avdi.org/devblog/2011/05/30/null-objects-and-falsiness/). While these articles talk about other things, they give part of a very simple Presenter strategy.
+
+The simplest presenter strategy that could possibly work.
+
+I've used this pattern on several projects, and it works **very well**. Starting yet another project where I wanted to use Presenters, I thought I'd wrap it up into a gem... plus some tricks I've learned along the way.
+
+But what about....
+==============================
+
+I know there are a few other presenter frameworks out there for Rails. One hasn't seen any activity since 2008, and one is [Draper](https://rubygems.org/gems/draper).
+
+I'm not a big fan of Draper's API, and it seemed too heavy to me. If Draper's your style, that's great: different strokes for different folks.
