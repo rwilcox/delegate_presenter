@@ -32,7 +32,7 @@ As `DelegatePresenter::Base` subclasses are just `SimpleDelegator`s at heart, th
 So, what is DelegatePresenter, really?
 ================================
 
-DelegatePresenter does two things:
+DelegatePresenter does three things:
 
   1. Inherits from Ruby Standard Library's SimpleDelegator. This simple class solves many of the problems I've seen with presenter APIs in the past. (calling object.method everywhere)
 
