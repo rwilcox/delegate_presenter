@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = DelegatePresenter::VERSION
   s.authors     = ["Ryan Wilcox"]
   s.email       = ["rwilcox@wilcoxd.com"]
-  s.homepage    = ""
+  s.homepage    = "http://github.com/rwilcox/delegate_presenter"
   s.summary     = %q{A simple Superclass for your Presenters, using SimpleDelegator}
   s.description = %q{Presenters are easier with delegators, and other friends}
 
