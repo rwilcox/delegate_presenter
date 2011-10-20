@@ -34,9 +34,9 @@ So, what is DelegatePresenter, really?
 
 DelegatePresenter does two things:
 
-  1. Inherits from Ruby Standard Library's SimpleDelegator. This simple class solves many of the problems I've seen with decorators in the past. (calling object.method everywhere)
+  1. Inherits from Ruby Standard Library's SimpleDelegator. This simple class solves many of the problems I've seen with presenter APIs in the past. (calling object.method everywhere)
 
-  2. Makes Rails helpers available to you via the helpers method, gives you s (above) and h (your old Rails 2 friend)
+  2. Makes Rails helpers available to you via the `helpers` method, gives you `s` (above) and `h` (your old Rails 2 friend).
 
   3. Gives you a `record_id` method, which will return the ActiveRecord ID of the database object. Because I think it should have been this way in the first place :)
 
@@ -56,7 +56,7 @@ Most of this gem was inspired by (and the initial structure stolen from), [Avdi 
 
 The simplest presenter strategy that could possibly work.
 
-I've used this pattern on several projects, and it works **very well**. Starting yet another project where I wanted to use Presenters, I thought I'd wrap it up into a gem... plus some tricks I've learned along the way.
+So I used it on a few projects, and extended the abilities were I had to. It's still *very* simple, doing only one or two things more than that original pattern. I just built on the shoulders of giants.
 
 But what about....
 ==============================
